@@ -1,567 +1,846 @@
 ```html
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog de Rudy Faro Mirval - La voix claire des Abymes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        body {
-            font-family: 'Lato', sans-serif;
-            background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
-        }
-        .playfair {
-            font-family: 'Playfair Display', serif;
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #00264D 0%, #FFD700 100%);
-        }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .btn-hover {
-            transition: all 0.3s ease;
-        }
-        .btn-hover:hover {
-            transform: translateY(-2px);
-        }
-        .nav-active {
-            border-bottom: 3px solid #FFD700;
-        }
-        .post-img {
-            transform: scale(1);
-            transition: transform 0.5s ease;
-        }
-        .post-img:hover {
-            transform: scale(1.05);
-        }
-        .social-hover {
-            transition: all 0.3s ease;
-        }
-        .social-hover:hover {
-            transform: translateY(-3px);
-        }
+      body {
+        font-family: "Lato", sans-serif;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
+      }
+      .playfair {
+        font-family: "Playfair Display", serif;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #00264d 0%, #ffd700 100%);
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .btn-hover {
+        transition: all 0.3s ease;
+      }
+      .btn-hover:hover {
+        transform: translateY(-2px);
+      }
+      .nav-active {
+        border-bottom: 3px solid #ffd700;
+      }
+      .post-img {
+        transform: scale(1);
+        transition: transform 0.5s ease;
+      }
+      .post-img:hover {
+        transform: scale(1.05);
+      }
+      .social-hover {
+        transition: all 0.3s ease;
+      }
+      .social-hover:hover {
+        transform: translateY(-3px);
+      }
     </style>
-</head>
-<body class="min-h-screen">
+  </head>
+  <body class="min-h-screen">
     <!-- Header -->
     <header class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-r from-blue-900 to-yellow-500 rounded-full flex items-center justify-center">
-                        <i class="fas fa-microphone-alt text-white"></i>
-                    </div>
-                    <div>
-                        <h1 class="text-xl font-bold text-gray-900">Rudy Faro Mirval</h1>
-                        <p class="text-sm text-blue-900">Les Abymes</p>
-                    </div>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#accueil" class="nav-active text-blue-900 font-semibold hover:text-yellow-600 transition duration-300">Accueil</a>
-                    <a href="#articles" class="text-gray-700 hover:text-yellow-600 transition duration-300">Articles</a>
-                    <a href="#engagements" class="text-gray-700 hover:text-yellow-600 transition duration-300">Engagements</a>
-                    <a href="#contact" class="text-gray-700 hover:text-yellow-600 transition duration-300">Contact</a>
-                </nav>
-                <div class="md:hidden">
-                    <button class="text-gray-700">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-10 h-10 bg-gradient-to-r from-blue-900 to-yellow-500 rounded-full flex items-center justify-center"
+            >
+              <i class="fas fa-microphone-alt text-white"></i>
             </div>
+            <div>
+              <h1 class="text-xl font-bold text-gray-900">Rudy Faro Mirval</h1>
+              <p class="text-sm text-blue-900">Les Abymes</p>
+            </div>
+          </div>
+          <nav class="hidden md:flex space-x-8">
+            <a
+              href="#accueil"
+              class="nav-active text-blue-900 font-semibold hover:text-yellow-600 transition duration-300"
+              >Accueil</a
+            >
+            <a
+              href="#articles"
+              class="text-gray-700 hover:text-yellow-600 transition duration-300"
+              >Articles</a
+            >
+            <a
+              href="#engagements"
+              class="text-gray-700 hover:text-yellow-600 transition duration-300"
+              >Engagements</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-yellow-600 transition duration-300"
+              >Contact</a
+            >
+          </nav>
+          <div class="md:hidden">
+            <button class="text-gray-700">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
     <section id="accueil" class="gradient-bg text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center">
-                <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight playfair">
-                        Une nouvelle voie, une vraie vision
-                    </h2>
-                    <div class="w-24 h-1 bg-yellow-300 mb-6"></div>
-                    <p class="text-xl mb-8 opacity-90">
-                        Bienvenue sur mon blog, espace de dialogue et de propositions pour les Abymes. 
-                        Ici, je partage mes réflexions, mes engagements et mes actions pour notre ville.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <button class="bg-yellow-500 text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition duration-300 btn-hover flex items-center space-x-2">
-                            <i class="fas fa-pen"></i>
-                            <span>Lire mon dernier article</span>
-                        </button>
-                        <button class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition duration-300 btn-hover">
-                            <i class="fas fa-handshake"></i>
-                            <span>Rejoindre l'équipe</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/2 flex justify-center">
-                    <div class="w-64 h-64 bg-white bg-opacity-20 rounded-full p-4 flex items-center justify-center backdrop-blur-sm">
-                        <div class="w-full h-full bg-gray-200 rounded-full flex items-center justify-center">
-                            <i class="fas fa-user text-8xl text-white opacity-50"></i>
-                        </div>
-                    </div>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center">
+          <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
+            <h2
+              class="text-4xl md:text-5xl font-bold mb-6 leading-tight playfair"
+            >
+              Une nouvelle voie, une vraie vision
+            </h2>
+            <div class="w-24 h-1 bg-yellow-300 mb-6"></div>
+            <p class="text-xl mb-8 opacity-90">
+              Bienvenue sur mon blog, espace de dialogue et de propositions pour
+              les Abymes. Ici, je partage mes réflexions, mes engagements et mes
+              actions pour notre ville.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <button
+                class="bg-yellow-500 text-blue-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition duration-300 btn-hover flex items-center space-x-2"
+              >
+                <i class="fas fa-pen"></i>
+                <span>Lire mon dernier article</span>
+              </button>
+              <button
+                class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition duration-300 btn-hover"
+              >
+                <i class="fas fa-handshake"></i>
+                <span>Rejoindre l'équipe</span>
+              </button>
             </div>
+          </div>
+          <div class="w-full lg:w-1/2 flex justify-center">
+            <div
+              class="w-64 h-64 bg-white bg-opacity-20 rounded-full p-4 flex items-center justify-center backdrop-blur-sm"
+            >
+              <div
+                class="w-full h-full bg-gray-200 rounded-full flex items-center justify-center"
+              >
+                <i class="fas fa-user text-8xl text-white opacity-50"></i>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Featured Article -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
-            <div class="md:flex">
-                <div class="md:w-1/2">
-                    <img src="https://placehold.co/600x400/00264D/FFFFFF?text=Les+Abymes" alt="Les Abymes" class="w-full h-full object-cover post-img">
-                </div>
-                <div class="md:w-1/2 p-8 md:p-12">
-                    <div class="flex items-center mb-4">
-                        <span class="bg-blue-900 text-white px-3 py-1 rounded-full text-sm font-medium">Éditorial</span>
-                        <span class="text-gray-500 text-sm ml-4">15 mars 2024</span>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 playfair">
-                        Pour une ville plus juste, plus verte, plus solidaire
-                    </h3>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        Chers Abymiens, depuis plusieurs semaines, je parcours notre magnifique commune, 
-                        rencontrant les habitants, les associations, les entrepreneurs. Ce blog est né de 
-                        cette volonté de créer un espace de dialogue authentique, loin des discours convenus.
-                    </p>
-                    <p class="text-gray-700 mb-8 leading-relaxed">
-                        Notre ville a un potentiel immense, mais elle mérite mieux : mieux que l'immobilisme, 
-                        mieux que les promesses non tenues, mieux que la division. Ensemble, bâtissons l'avenir 
-                        que nos enfants méritent.
-                    </p>
-                    <div class="flex items-center justify-between">
-                        <div class="flex space-x-4">
-                            <button class="text-blue-900 hover:text-yellow-600 transition duration-300">
-                                <i class="fas fa-heart mr-2"></i>127 J'aime
-                            </button>
-                            <button class="text-blue-900 hover:text-yellow-600 transition duration-300">
-                                <i class="fas fa-comment mr-2"></i>24 Commentaires
-                            </button>
-                        </div>
-                        <button class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300">
-                            Lire la suite →
-                        </button>
-                    </div>
-                </div>
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden card-hover">
+        <div class="md:flex">
+          <div class="md:w-1/2">
+            <img
+              src="https://placehold.co/600x400/00264D/FFFFFF?text=Les+Abymes"
+              alt="Les Abymes"
+              class="w-full h-full object-cover post-img"
+            />
+          </div>
+          <div class="md:w-1/2 p-8 md:p-12">
+            <div class="flex items-center mb-4">
+              <span
+                class="bg-blue-900 text-white px-3 py-1 rounded-full text-sm font-medium"
+                >Éditorial</span
+              >
+              <span class="text-gray-500 text-sm ml-4">15 mars 2024</span>
             </div>
+            <h3
+              class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 playfair"
+            >
+              Pour une ville plus juste, plus verte, plus solidaire
+            </h3>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              Chers Abymiens, depuis plusieurs semaines, je parcours notre
+              magnifique commune, rencontrant les habitants, les associations,
+              les entrepreneurs. Ce blog est né de cette volonté de créer un
+              espace de dialogue authentique, loin des discours convenus.
+            </p>
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              Notre ville a un potentiel immense, mais elle mérite mieux : mieux
+              que l'immobilisme, mieux que les promesses non tenues, mieux que
+              la division. Ensemble, bâtissons l'avenir que nos enfants
+              méritent.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-4">
+                <button
+                  class="text-blue-900 hover:text-yellow-600 transition duration-300"
+                >
+                  <i class="fas fa-heart mr-2"></i>127 J'aime
+                </button>
+                <button
+                  class="text-blue-900 hover:text-yellow-600 transition duration-300"
+                >
+                  <i class="fas fa-comment mr-2"></i>24 Commentaires
+                </button>
+              </div>
+              <button
+                class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300"
+              >
+                Lire la suite →
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Articles Section -->
     <section id="articles" class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4 playfair">Derniers articles</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-900 to-yellow-500 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Découvrez mes réflexions, mes propositions et mes actions pour les Abymes
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Article 1 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <img src="https://placehold.co/400x250/4CAF50/FFFFFF?text=Écologie" alt="Écologie" class="w-full h-48 object-cover post-img">
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">Écologie</span>
-                            <span class="text-gray-500 text-sm ml-3">8 mars 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
-                            Vers une transition écologique inclusive
-                        </h3>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            Comment concilier développement durable et justice sociale dans notre commune ?
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">5 min de lecture</span>
-                            <button class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300">
-                                Lire →
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <img src="https://placehold.co/400x250/2196F3/FFFFFF?text=Jeunesse" alt="Jeunesse" class="w-full h-48 object-cover post-img">
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Jeunesse</span>
-                            <span class="text-gray-500 text-sm ml-3">1 mars 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
-                            L'avenir appartient à nos jeunes
-                        </h3>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            Pourquoi investir massivement dans l'éducation et l'emploi des jeunes est prioritaire.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">7 min de lecture</span>
-                            <button class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300">
-                                Lire →
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <img src="https://placehold.co/400x250/9C27B0/FFFFFF?text=Économie" alt="Économie" class="w-full h-48 object-cover post-img">
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">Économie</span>
-                            <span class="text-gray-500 text-sm ml-3">20 février 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
-                            Relancer l'économie locale
-                        </h3>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            Nos propositions concrètes pour soutenir les entrepreneurs et créer des emplois.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">6 min de lecture</span>
-                            <button class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300">
-                                Lire →
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 4 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <img src="https://placehold.co/400x250/FF9800/FFFFFF?text=Culture" alt="Culture" class="w-full h-48 object-cover post-img">
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">Culture</span>
-                            <span class="text-gray-500 text-sm ml-3">10 février 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
-                            La culture au cœur de la cité
-                        </h3>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            Pourquoi la culture est un pilier essentiel du vivre-ensemble.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">4 min de lecture</span>
-                            <button class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300">
-                                Lire →
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 5 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <img src="https://placehold.co/400x250/607D8B/FFFFFF?text=Solidarité" alt="Solidarité" class="w-full h-48 object-cover post-img">
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-medium">Solidarité</span>
-                            <span class="text-gray-500 text-sm ml-3">3 février 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
-                            Construire une ville inclusive
-                        </h3>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            Nos actions pour lutter contre les inégalités et renforcer la cohésion sociale.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">8 min de lecture</span>
-                            <button class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300">
-                                Lire →
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 6 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <img src="https://placehold.co/400x250/795548/FFFFFF?text=Transport" alt="Transport" class="w-full h-48 object-cover post-img">
-                    <div class="p-6">
-                        <div class="flex items-center mb-3">
-                            <span class="bg-brown-500 text-white px-3 py-1 rounded-full text-sm font-medium">Mobilité</span>
-                            <span class="text-gray-500 text-sm ml-3">25 janvier 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
-                            Réinventer nos déplacements
-                        </h3>
-                        <p class="text-gray-700 mb-4 leading-relaxed">
-                            Un plan ambitieux pour des transports durables et accessibles à tous.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm text-gray-500">5 min de lecture</span>
-                            <button class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300">
-                                Lire →
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-12">
-                <button class="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition duration-300 btn-hover flex items-center space-x-2 mx-auto">
-                    <i class="fas fa-plus"></i>
-                    <span>Voir tous les articles</span>
-                </button>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4 playfair">
+            Derniers articles
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-blue-900 to-yellow-500 mx-auto mb-6"
+          ></div>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Découvrez mes réflexions, mes propositions et mes actions pour les
+            Abymes
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Article 1 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+            <img
+              src="https://placehold.co/400x250/4CAF50/FFFFFF?text=Écologie"
+              alt="Écologie"
+              class="w-full h-48 object-cover post-img"
+            />
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span
+                  class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >Écologie</span
+                >
+                <span class="text-gray-500 text-sm ml-3">8 mars 2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
+                Vers une transition écologique inclusive
+              </h3>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                Comment concilier développement durable et justice sociale dans
+                notre commune ?
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">5 min de lecture</span>
+                <button
+                  class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300"
+                >
+                  Lire →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+            <img
+              src="https://placehold.co/400x250/2196F3/FFFFFF?text=Jeunesse"
+              alt="Jeunesse"
+              class="w-full h-48 object-cover post-img"
+            />
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span
+                  class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >Jeunesse</span
+                >
+                <span class="text-gray-500 text-sm ml-3">1 mars 2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
+                L'avenir appartient à nos jeunes
+              </h3>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                Pourquoi investir massivement dans l'éducation et l'emploi des
+                jeunes est prioritaire.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">7 min de lecture</span>
+                <button
+                  class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300"
+                >
+                  Lire →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+            <img
+              src="https://placehold.co/400x250/9C27B0/FFFFFF?text=Économie"
+              alt="Économie"
+              class="w-full h-48 object-cover post-img"
+            />
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span
+                  class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >Économie</span
+                >
+                <span class="text-gray-500 text-sm ml-3">20 février 2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
+                Relancer l'économie locale
+              </h3>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                Nos propositions concrètes pour soutenir les entrepreneurs et
+                créer des emplois.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">6 min de lecture</span>
+                <button
+                  class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300"
+                >
+                  Lire →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 4 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+            <img
+              src="https://placehold.co/400x250/FF9800/FFFFFF?text=Culture"
+              alt="Culture"
+              class="w-full h-48 object-cover post-img"
+            />
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span
+                  class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >Culture</span
+                >
+                <span class="text-gray-500 text-sm ml-3">10 février 2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
+                La culture au cœur de la cité
+              </h3>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                Pourquoi la culture est un pilier essentiel du vivre-ensemble.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">4 min de lecture</span>
+                <button
+                  class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300"
+                >
+                  Lire →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 5 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+            <img
+              src="https://placehold.co/400x250/607D8B/FFFFFF?text=Solidarité"
+              alt="Solidarité"
+              class="w-full h-48 object-cover post-img"
+            />
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span
+                  class="bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >Solidarité</span
+                >
+                <span class="text-gray-500 text-sm ml-3">3 février 2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
+                Construire une ville inclusive
+              </h3>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                Nos actions pour lutter contre les inégalités et renforcer la
+                cohésion sociale.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">8 min de lecture</span>
+                <button
+                  class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300"
+                >
+                  Lire →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 6 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+            <img
+              src="https://placehold.co/400x250/795548/FFFFFF?text=Transport"
+              alt="Transport"
+              class="w-full h-48 object-cover post-img"
+            />
+            <div class="p-6">
+              <div class="flex items-center mb-3">
+                <span
+                  class="bg-brown-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >Mobilité</span
+                >
+                <span class="text-gray-500 text-sm ml-3">25 janvier 2024</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 playfair">
+                Réinventer nos déplacements
+              </h3>
+              <p class="text-gray-700 mb-4 leading-relaxed">
+                Un plan ambitieux pour des transports durables et accessibles à
+                tous.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">5 min de lecture</span>
+                <button
+                  class="text-yellow-600 font-semibold hover:text-yellow-700 transition duration-300"
+                >
+                  Lire →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <button
+            class="bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition duration-300 btn-hover flex items-center space-x-2 mx-auto"
+          >
+            <i class="fas fa-plus"></i>
+            <span>Voir tous les articles</span>
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- Engagements Section -->
     <section id="engagements" class="bg-gray-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4 playfair">Mes engagements prioritaires</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-blue-900 to-yellow-500 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto">
-                    Des propositions concrètes pour transformer ensemble les Abymes
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Engagement 1 -->
-                <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
-                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-leaf text-2xl text-green-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Transition écologique</h3>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
-                        Création de 50 hectares d'espaces verts, développement des énergies renouvelables, 
-                        et mise en place d'un plan climat ambitieux pour réduire nos émissions de 50% d'ici 2030.
-                    </p>
-                    <ul class="text-gray-700 space-y-2 text-sm">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Parcs et jardins partagés</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Énergies solaires sur bâtiments publics</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Programme de reforestation</li>
-                    </ul>
-                </div>
-
-                <!-- Engagement 2 -->
-                <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
-                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-graduation-cap text-2xl text-blue-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Éducation & Jeunesse</h3>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
-                        Modernisation de tous les établissements scolaires, création de 500 emplois jeunes, 
-                        et développement de programmes d'accompagnement éducatif innovants.
-                    </p>
-                    <ul class="text-gray-700 space-y-2 text-sm">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Classes numériques équipées</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Centres de loisirs innovants</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Bourses d'excellence locales</li>
-                    </ul>
-                </div>
-
-                <!-- Engagement 3 -->
-                <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
-                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-handshake text-2xl text-purple-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Économie & Emploi</h3>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
-                        Soutien aux entrepreneurs locaux, création d'une zone économique verte, 
-                        et mise en place de formations qualifiantes adaptées aux besoins du marché.
-                    </p>
-                    <ul class="text-gray-700 space-y-2 text-sm">
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Incubateur d'entreprises</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Marchés paysans hebdomadaires</li>
-                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Programmes de requalification</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4 playfair">
+            Mes engagements prioritaires
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-blue-900 to-yellow-500 mx-auto mb-6"
+          ></div>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Des propositions concrètes pour transformer ensemble les Abymes
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Engagement 1 -->
+          <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+            <div
+              class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-leaf text-2xl text-green-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Transition écologique
+            </h3>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              Création de 50 hectares d'espaces verts, développement des
+              énergies renouvelables, et mise en place d'un plan climat
+              ambitieux pour réduire nos émissions de 50% d'ici 2030.
+            </p>
+            <ul class="text-gray-700 space-y-2 text-sm">
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-2"></i> Parcs et
+                jardins partagés
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-2"></i> Énergies
+                solaires sur bâtiments publics
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-2"></i> Programme de
+                reforestation
+              </li>
+            </ul>
+          </div>
+
+          <!-- Engagement 2 -->
+          <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-graduation-cap text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Éducation & Jeunesse
+            </h3>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              Modernisation de tous les établissements scolaires, création de
+              500 emplois jeunes, et développement de programmes
+              d'accompagnement éducatif innovants.
+            </p>
+            <ul class="text-gray-700 space-y-2 text-sm">
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-2"></i> Classes
+                numériques équipées
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-2"></i> Centres de
+                loisirs innovants
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-2"></i> Bourses
+                d'excellence locales
+              </li>
+            </ul>
+          </div>
+
+          <!-- Engagement 3 -->
+          <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+            <div
+              class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-handshake text-2xl text-purple-600"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              Économie & Emploi
+            </h3>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+              Soutien aux entrepreneurs locaux, création d'une zone économique
+              verte, et mise en place de formations qualifiantes adaptées aux
+              besoins du marché.
+            </p>
+            <ul class="text-gray-700 space-y-2 text-sm">
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-2"></i> Incubateur
+                d'entreprises
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-2"></i> Marchés paysans
+                hebdomadaires
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-2"></i> Programmes de
+                requalification
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Newsletter Section -->
     <section class="gradient-bg text-white py-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-4 playfair">Restez informés</h2>
-            <p class="text-xl mb-8 opacity-90">
-                Abonnez-vous à notre newsletter pour recevoir les dernières actualités et événements
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
-                <input type="email" placeholder="Votre adresse email" class="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500">
-                <button class="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition duration-300 btn-hover">
-                    S'abonner
-                </button>
-            </div>
-            <p class="text-sm mt-4 opacity-80">
-                Nous respectons votre vie privée. Aucun spam, promis.
-            </p>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-4 playfair">Restez informés</h2>
+        <p class="text-xl mb-8 opacity-90">
+          Abonnez-vous à notre newsletter pour recevoir les dernières actualités
+          et événements
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
+          <input
+            type="email"
+            placeholder="Votre adresse email"
+            class="flex-1 px-6 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          />
+          <button
+            class="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 transition duration-300 btn-hover"
+          >
+            S'abonner
+          </button>
         </div>
+        <p class="text-sm mt-4 opacity-80">
+          Nous respectons votre vie privée. Aucun spam, promis.
+        </p>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6 playfair">Contactez-moi</h2>
-                    <p class="text-gray-700 mb-8 leading-relaxed">
-                        Je suis à l'écoute de vos suggestions, vos idées et vos préoccupations. 
-                        N'hésitez pas à me contacter pour échanger ou participer à la campagne.
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-map-marker-alt text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900">Siège de campagne</h3>
-                                <p class="text-gray-700">Chemin Coulée Zebsi, 97139 Les Abymes, Guadeloupe</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-phone text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900">Téléphone</h3>
-                                <p class="text-gray-700">+590 690 57 08 46</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                <i class="fas fa-envelope text-blue-600"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900">Email</h3>
-                                <p class="text-gray-700">contact@faromirval.com</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 playfair">
+              Contactez-moi
+            </h2>
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              Je suis à l'écoute de vos suggestions, vos idées et vos
+              préoccupations. N'hésitez pas à me contacter pour échanger ou
+              participer à la campagne.
+            </p>
 
-                    <div class="mt-8">
-                        <h3 class="font-bold text-gray-900 mb-4">Suivez-moi sur les réseaux</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300 social-hover">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300 social-hover">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition duration-300 social-hover">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition duration-300 social-hover">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="fas fa-map-marker-alt text-blue-600"></i>
                 </div>
-
                 <div>
-                    <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
-                        <form class="space-y-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Nom complet</label>
-                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Sujet</label>
-                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                    <option>Une suggestion</option>
-                                    <option>Participer à la campagne</option>
-                                    <option>Question sur un engagement</option>
-                                    <option>Autre</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                                <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-gradient-to-r from-blue-900 to-yellow-500 text-white py-3 rounded-lg font-semibold hover:from-blue-800 hover:to-yellow-400 transition duration-300 btn-hover">
-                                Envoyer le message
-                            </button>
-                        </form>
-                    </div>
+                  <h3 class="font-bold text-gray-900">Siège de campagne</h3>
+                  <p class="text-gray-700">
+                    Chemin Coulée Zebsi, 97139 Les Abymes, Guadeloupe
+                  </p>
                 </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="fas fa-phone text-blue-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-gray-900">Téléphone</h3>
+                  <p class="text-gray-700">+590 690 57 08 46</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="fas fa-envelope text-blue-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-gray-900">Email</h3>
+                  <p class="text-gray-700">rudy.faro@gmail.com</p>
+                </div>
+              </div>
             </div>
+
+            <div class="mt-8">
+              <h3 class="font-bold text-gray-900 mb-4">
+                Suivez-moi sur les réseaux
+              </h3>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300 social-hover"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300 social-hover"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition duration-300 social-hover"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center hover:bg-blue-800 transition duration-300 social-hover"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+              <form class="space-y-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Nom complet</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Sujet</label
+                  >
+                  <select
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option>Une suggestion</option>
+                    <option>Participer à la campagne</option>
+                    <option>Question sur un engagement</option>
+                    <option>Autre</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    rows="5"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-blue-900 to-yellow-500 text-white py-3 rounded-lg font-semibold hover:from-blue-800 hover:to-yellow-400 transition duration-300 btn-hover"
+                >
+                  Envoyer le message
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-r from-blue-900 to-yellow-500 rounded-full flex items-center justify-center">
-                            <i class="fas fa-microphone-alt text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold">Rudy Faro Mirval</h3>
-                            <p class="text-blue-300">La voix claire des Abymes</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        Ce blog est un espace de dialogue, de propositions et d'engagement pour construire ensemble 
-                        une nouvelle voie pour les Abymes. Une ville plus juste, plus verte, plus solidaire.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Liens rapides</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#accueil" class="hover:text-white transition duration-300">Accueil</a></li>
-                        <li><a href="#articles" class="hover:text-white transition duration-300">Articles</a></li>
-                        <li><a href="#engagements" class="hover:text-white transition duration-300">Engagements</a></li>
-                        <li><a href="#contact" class="hover:text-white transition duration-300">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">Événements</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-bold text-lg mb-4">Légal</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition duration-300">Mentions légales</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">Politique de confidentialité</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">Conditions d'utilisation</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">Transparence</a></li>
-                    </ul>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-3 mb-4">
+              <div
+                class="w-10 h-10 bg-gradient-to-r from-blue-900 to-yellow-500 rounded-full flex items-center justify-center"
+              >
+                <i class="fas fa-microphone-alt text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Rudy Faro Mirval</h3>
+                <p class="text-blue-300">La voix claire des Abymes</p>
+              </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">
-                    © 2024 Rudy Faro Mirval - Tous droits réservés | Candidat aux élections municipales - Sous réserve d'inscription officielle
-                </p>
+            <p class="text-gray-400 mb-6 leading-relaxed">
+              Ce blog est un espace de dialogue, de propositions et d'engagement
+              pour construire ensemble une nouvelle voie pour les Abymes. Une
+              ville plus juste, plus verte, plus solidaire.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
             </div>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Liens rapides</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a
+                  href="#accueil"
+                  class="hover:text-white transition duration-300"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#articles"
+                  class="hover:text-white transition duration-300"
+                  >Articles</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#engagements"
+                  class="hover:text-white transition duration-300"
+                  >Engagements</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="hover:text-white transition duration-300"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition duration-300"
+                  >Événements</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-lg mb-4">Légal</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a href="#" class="hover:text-white transition duration-300"
+                  >Mentions légales</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition duration-300"
+                  >Politique de confidentialité</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition duration-300"
+                  >Conditions d'utilisation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition duration-300"
+                  >Transparence</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-gray-400">
+            © 2024 Rudy Faro Mirval - Tous droits réservés | Candidat aux
+            élections municipales - Sous réserve d'inscription officielle
+          </p>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
 
 ```
